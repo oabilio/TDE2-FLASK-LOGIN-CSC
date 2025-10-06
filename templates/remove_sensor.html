@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}
+Minha Casa
+{% endblock %}
+{% block content %}
+<div class="row mt-3">
+    <div class="col-md-4"></div>
+
+    <div class="col-md-4">
+        <h2 class="fw-bold">Remover Sensor:</h2>
+        <form method="post" action="/sensors/del_sensor">
+
+            <div class="form-outline mb-4">
+                <label class="form-label" for="sensor">Selecione o Sensor</label>
+                <select name="sensor" id="sensor" class="form-select" required>
+                    <option selected disabled>Escolha um sensor</option>
+                    {% for sensor in sensors %}
+                    <option value="{{ sensor }}">{{ sensor }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-danger btn-block">Deletar</button>
+        </form>
+    </div>
+    
+    <div class="col-md-4"></div>
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}
+Minha Casa
+{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-12 col-md-4 mt-4 text-center d-flex flex-column gap-2">
+        <h6 class="mb-3">Acesse:</h6>
+        <a href="/sensors"><button type="button" class="btn btn-secondary w-100">Listar Sensores</button></a>
+        <a href="/actuators"><button type="button" class="btn btn-secondary w-100">Listar Atuadores</button></a>
+        <a href="/register_user"><button type="button" class="btn btn-secondary w-100">Cadastrar Usuários</button></a>
+        <a href="/sensors/register_sensor"><button type="button" class="btn btn-secondary w-100">Cadastrar Sensores</button></a>
+        <a href="/actuators/register_actuator"><button type="button" class="btn btn-secondary w-100">Cadastrar Atuadores</button></a>
+        <a href="/list_users"><button type="button" class="btn btn-secondary w-100">Listar Usuários</button></a>
+        <a href="/remove_user"><button type="button" class="btn btn-secondary w-100">Remover Usuário</button></a>
+        <a href="/sensors/remove_sensor"><button type="button" class="btn btn-secondary w-100">Remover Sensor</button></a>
+        <a href="/actuators/remove_actuator"><button type="button" class="btn btn-secondary w-100">Remover Atuador</button></a>
+    </div>
+</div>
+{% endblock %}

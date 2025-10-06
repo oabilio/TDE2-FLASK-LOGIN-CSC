@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}
+Atuadores
+{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col mt-2">
+        <h6>Atuadores disponíveis:</h6>
+        <ol class="list-group list-group-numbered">
+            {% for actuator in actuators %}
+                <li class="list-group-item">{{ actuator }}</li>
+            {% endfor %}
+        </ol>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col mt-1">
+        <a href="/home"><button type="button" class="btn btn-danger"><i class="bi bi-arrow-return-left"></i> Voltar para Início</button></a>
+    </div>
+</div>
+{% endblock %}

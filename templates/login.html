@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}
+Minha Casa
+{% endblock %}
+{% block content %}
+<div class="row mt-3">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <h2 class="fw-bold">Login:</h2>
+    <form method="post" action="{{ url_for('login.index') }}">
+      <div data-mdb-input-init class="form-outline mb-4">
+        <input type="text" name="user" id="user" class="form-control" />
+        <label class="form-label" for="user">User</label>
+      </div>
+
+      <div data-mdb-input-init class="form-outline mb-2">
+        <input type="password" name="password" id="password" class="form-control" />
+        <label class="form-label" for="password">Password</label>
+      </div>
+
+      <button type="submit" class="btn btn-secondary btn-block">Entrar</button>
+    </form>
+  </div>
+  <div class="col-md-4"></div>
+</div>
+{% endblock %}
